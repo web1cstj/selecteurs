@@ -1,4 +1,3 @@
-/*jslint browser:true,esnext:true */
 export default class Selecteur {
 	constructor(niveau) {
 		niveau = parseInt(niveau) || (this.alea(3) + 1);
@@ -58,7 +57,7 @@ export default class Selecteur {
 
 	static dom_radio(name, value, etiquette) {
 		var resultat = document.createElement("span");
-		resultat.classList.add("bouton");
+		resultat.classList.add("bouton", "button");
 		var input = resultat.appendChild(document.createElement("input"));
 		const id = name + "_" + value;
 		input.setAttribute("type", "radio");
@@ -67,13 +66,14 @@ export default class Selecteur {
 		input.setAttribute("id", id);
 		var label = resultat.appendChild(document.createElement("label"));
 		label.setAttribute("for", id);
+		label.classList.add("button");
 		label.appendChild(document.createTextNode(etiquette));
 		return resultat;
 	}
 	static dom_action(id, action) {
 		var resultat = document.createElement("span");
 		var label = resultat.appendChild(document.createElement("label"));
-		resultat.classList.add("bouton");
+		resultat.classList.add("bouton", "button");
 		resultat.setAttribute("id", "action_"+id)
 		label.appendChild(document.createTextNode(action.label));
 		resultat.addEventListener("click", action.handler);

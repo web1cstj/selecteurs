@@ -1,0 +1,38 @@
+h1 {
+	color: var(--couleur-principale-foncee);
+	font-family:saira;
+	font-size:3em;
+	text-align:center;
+	line-height: 1em;
+	margin: .25em;
+	font-weight: 900;
+}
+div#affichage {
+	font-size:1em;
+}
+span.balise {
+	font-family: "Courier New";
+}
+span.ainsi {
+	font-size:smaller;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+span.separateur {
+	color:#b81;
+}
+div.body {
+	--gap: 1rem;
+	display: grid;
+	gap: var(--gap);
+	padding: var(--gap);
+	grid-template-rows: auto 1fr;
+	form {
+		display: contents;
+	}
+}
+@media (max-aspect-ratio : 1 / 1) {	
+	body {
+		background-color: red;
+	}
+}

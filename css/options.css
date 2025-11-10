@@ -19,7 +19,6 @@
 			display: none;
 		}
 		label {
-			@include button;
 			grid-template-columns: 1.5em 1fr;
 			--taille-coche: 0.7em;
 			&::before {
@@ -49,7 +48,6 @@
 		}
 	}
 	fieldset {
-		// grid-column: 1;
 		text-align:center;
 		background-color: var(--couleur-principale-pale);
 		border: none;
@@ -69,11 +67,6 @@
 			gap: .5ch 1ch;
 			height: 100%;
 			box-sizing: border-box;
-			// grid-auto-columns: 1fr;
-			// grid-auto-flow: column;
-			// & > span {
-				// display: contents;
-			// }
 		}
 	}
 	.actions {

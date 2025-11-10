@@ -1,4 +1,3 @@
-@import "_variables";
 #question {
 	display: grid;
 	grid-template-columns: max-content 1fr;
@@ -7,7 +6,6 @@
 	height: 100%;
 	font-size: 190%;
 	button {
-		@include button;
 		grid-row: span -1;
 		grid-column: 1 / -1;
 		justify-self: center;
